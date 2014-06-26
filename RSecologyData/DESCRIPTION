@@ -1,4 +1,4 @@
-Package: rsecodata
+Package: RSecologyData
 Title: This package provides various spatial data sets for a region in Brazil
 Version: 0.1
 Authors@R: c(person("Martin","Wegmann",
