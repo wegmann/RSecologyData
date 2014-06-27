@@ -20,9 +20,7 @@
 #' @author Martin Wegmann
 
         load_vector <- function(overwrite=TRUE){
-#                               x <- c("lsat_extent_LL","lsat_extent","modis_extent","roads","pa","abspres_poi","pres_poi","count_poi","trend_poi","study_area")
-                              x <- c("lsat_extent_LL","roads","pa","abspres_poi","pres_poi","count_poi","trend_poi")
-                              
+                              x <- c("lsat_extent_LL","lsat_extent","roads","pa","abspres_poi","pres_poi","count_poi","trend_poi","study_area")  
                               for ( i in x) {
                               if(exists(i)) warning('object "', i, '" already exists',call.=FALSE)
                               else(
