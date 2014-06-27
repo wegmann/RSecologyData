@@ -11,10 +11,14 @@
 #' @seealso load_raster()
 #' @examples
 #' load_vector()
+#' ## plotting the data in geographic coordinates
 #' plot(lsat_extent_LL)
-#' ##
+#' 
+#' ## plotting the data in UTM north projection
 #' plot(pa)
 #' plot(abspres_poi,col="yellow",add=T)
+#' @docType data
+#' @name load_vector
 #' @references
 #' \href{http://remote-sensing-biodiversity.org/rsecology-book}.
 #' @author Martin Wegmann
@@ -29,13 +33,5 @@
                               }
             }
     
-#' data: vector file with the extent of the Landsat scene path 224 r 63 - SpatialPolygonsDataFrame
-#' 
-#' Contains a polygon of the area of the Landsat scene with path 224 and row 63 of the WRS2 system.
-#'
-#' @docType data
-#' @name load_vector
-
-NULL
 
 

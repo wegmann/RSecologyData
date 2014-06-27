@@ -9,8 +9,6 @@ load_vector(overwrite = TRUE)
 \description{
 All files are spatial vector data sets (Polygons, Lines or Points) providing information
 such as border of protected areas, field sampling sites or roads.
-
-Contains a polygon of the area of the Landsat scene with path 224 and row 63 of the WRS2 system.
 }
 \details{
 the files are
@@ -20,8 +18,10 @@ roads: roads of the area covered by lsat_extent (projection UTM north WGS84)
 }
 \examples{
 load_vector()
+## plotting the data in geographic coordinates
 plot(lsat_extent_LL)
-##
+
+## plotting the data in UTM north projection
 plot(pa)
 plot(abspres_poi,col="yellow",add=T)
 }
