@@ -1,0 +1,16 @@
+Package: RSecologyData
+Title: This package provides various spatial data sets for a region in Brazil
+Version: 0.1
+Authors@R: c(person("Martin","Wegmann",
+    email="martin.wegmann@remote-sensing-biodiversity.org", role=c("aut",
+    "cre")))
+Maintainer: Martin Wegmann <martin.wegmann@remote-sensing-biodiversity.org>
+Description: Spatial data files (vector and raster) for the Parakanã Indigenous
+    Reserve in the state of Para, Brazil. The data sets are used in the "Remote
+    Sensing and GIS for Ecologists" book by Wegmann, Leutner and Dech (edt.).
+Depends:
+    R (>= 3.0.0),
+    raster,
+    rgdal
+License: GPL (>= 3)
+URL: https://github.com/wegmann/rsecodata
