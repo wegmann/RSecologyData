@@ -11,11 +11,15 @@ All files are spatial raster sets (bricks or single raster)
 }
 \details{
 the files are
+
+lsatp224r63_1988: Landsat ... (date, 1988; path 224 row 63, projection UTM north WGS84)
+
 lsatp224r63_2005: Landsat ... (date, 2005; path 224 row 63, projection UTM north WGS84)
 }
 \examples{
 load_raster()
 plotRGB(lsat224r63_2005,1,2,3,stretch="lin")
+load_vector()
 plot(pa,add=T)
 plot(abspres_poi,col="yellow",add=T)
 }

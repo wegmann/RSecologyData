@@ -12,9 +12,28 @@ such as border of protected areas, field sampling sites or roads.
 }
 \details{
 the files are
-lsat_extent_LL: landsat extent for path 224 r63 (geographic coordinates lat long)
-pa: protected areas of the area covered by lsat_extent (projection UTM north WGS84)
-roads: roads of the area covered by lsat_extent (projection UTM north WGS84)
+
+"lsat_extent_LL": landsat extent for path 224 r63 (geographic coordinates lat long)
+
+"lsat_extent": landsat extent for path 224 r63 (projection UTM north WGS84)
+
+"study_area": rectangle of the study area (projection UTM north WGS84)
+
+"pa": protected areas of the area covered by lsat_extent (projection UTM north WGS84)
+
+"roads": roads of the area covered by lsat_extent (projection UTM north WGS84)
+
+"training_vector_data": polygons with land cover classes for land cover classification (projection UTM north WGS84)
+
+"change_classes": polygons with land cover change classes for change detection (projection UTM north WGS84)
+
+"abspres_poi": point data with absence and presence data (0-1) (projection UTM north WGS84)
+
+"pres_poi": point data with presence data only (projection UTM north WGS84)
+
+"count_poi": point data with count data (whole numbers) (projection UTM north WGS84)
+
+"trend_poi": point data with trend data (negative and positive values) (projection UTM north WGS84)
 }
 \examples{
 load_vector()
