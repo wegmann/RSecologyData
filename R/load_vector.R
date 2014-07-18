@@ -53,5 +53,14 @@
                               }
             }
     
+        load_vector_MODIS <- function(overwrite=TRUE){
+          x <- c("MODIS_tiles_sinusoidal","MODIS_country_sinusoidal","MODIS_bnd_sinusoidal")  
+          for ( i in x) {
+            if(exists(i)) warning('object "', i, '" already exists',call.=FALSE)
+            else(
+              assign(i,readRDS(system.file(paste("extdata/",i,".rds",sep=""),package="RSecologyData")),envir=.GlobalEnv)
+            )
+          }
+        }
 
 

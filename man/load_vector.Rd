@@ -2,13 +2,18 @@
 \docType{data}
 \name{load_vector}
 \alias{load_vector}
+\alias{load_vector_MODIS}
 \title{load all vector files stored in the RSecologyData package}
 \usage{
 load_vector(overwrite = TRUE)
+
+load_vector_MODIS(overwrite = TRUE)
 }
 \description{
 All files are spatial vector data sets (Polygons, Lines or Points) providing information
 such as border of protected areas, field sampling sites or roads.
+
+Vector files related to MODIS e.g. the MODIS h-v grid.
 }
 \details{
 the files are
@@ -34,6 +39,16 @@ the files are
 "count_poi": point data with count data (whole numbers) (projection UTM north WGS84)
 
 "trend_poi": point data with trend data (negative and positive values) (projection UTM north WGS84)
+
+The vector files are related to MODIS and provide information in sinusoidal projection on country boundaries or the MODIS grid.
+All files are spatial vector data sets (Polygons, Lines or Points).
+Data compiled by Markus Neteler (FMACH) using GRASS (CC-BY-SA: http://gis.cri.fmach.it/modis-sinusoidal-gis-files/)
+
+"MODIS_tiles_sinu": MODIS tiles (h-v) in sinusoidal projection
+
+"MODIS_bnd_sinu": country boundaries in sinusoidal projection
+
+"MODIS_world_sinu": the borders of the map in sinusoidal projection
 }
 \examples{
 load_vector()
@@ -43,18 +58,33 @@ plot(lsat_extent_LL)
 ## plotting the data in UTM north projection
 plot(pa)
 plot(abspres_poi,col="yellow",add=T)
+load_vector_MODIS()
+## plotting the world and country boundaries in sinusoidal projection
+plot(MODIS_world_sinu)
+plot(MODIS_bnd_sinu, add=T)
+
+## adding the MODIS grid
+plot(MODIS_tiles_sinu,add=T)
 }
 \author{
+Martin Wegmann
+
 Martin Wegmann
 }
 \references{
 \href{http://remote-sensing-biodiversity.org/rsecology-book}.
+
+\href{http://remote-sensing-biodiversity.org/rsecology-book}.
 }
 \seealso{
 load_raster()
+
+load_vector(), load_raster(), load_raster_MODIS()
 }
+\keyword{MODIS}
 \keyword{data}
 \keyword{frames}
+\keyword{frames,}
 \keyword{shape}
 \keyword{spatial}
 \keyword{vector,}
